@@ -35,9 +35,22 @@ The goal of the project is to clearly show how **heartbeat-based failure detecti
 
 - **Programming Language:** Java
 - **Messaging System:** RabbitMQ
-- **Docker** Docker Desktop
+- **Docker + Docker Compose**
 - **Build Tool:** Maven
 - **Protocol Concept:** SWIM (centralized variant)
+
+## RabbitMQ (Docker Compose)
+
+This project uses RabbitMQ as a message broker for the centralized model.
+RabbitMQ is provided via Docker Compose. Use this bash command in the root of the project, before running the Java files.
+RabbitMQ will be available at "http://localhost:15672"
+
+To start RabbitMQ, run the following command from the project root:
+
+```bash
+docker compose up -d
+```
+
 
 ## Authors
 
