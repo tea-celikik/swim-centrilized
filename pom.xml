@@ -16,7 +16,6 @@
     </properties>
 
     <dependencies>
-        <!-- RabbitMQ Java Client -->
         <dependency>
             <groupId>com.rabbitmq</groupId>
             <artifactId>amqp-client</artifactId>

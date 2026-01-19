@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>SWIM Centralized Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { margin-bottom: 6px; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+        .card { border: 1px solid #ddd; border-radius: 10px; padding: 14px; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 8px; border-bottom: 1px solid #eee; text-align: left; }
+        .status { font-weight: bold; padding: 2px 8px; border-radius: 8px; display: inline-block; }
+        .ALIVE { background: #e8fff0; }
+        .SUSPECT { background: #fff6e5; }
+        .DEAD { background: #ffe8e8; }
+        #events { height: 420px; overflow: auto; background: #fafafa; border: 1px solid #eee; padding: 10px; border-radius: 8px; }
+        .event { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 12px; margin-bottom: 6px; }
+        .muted { color: #666; font-size: 12px; }
+    </style>
+</head>
+<body>
+<h1>SWIM Centralized Dashboard</h1>
+<div class="muted">Прикажува статуси (ALIVE/SUSPECT/DEAD) и моментална комуникација (HEARTBEAT + MEMBERSHIP_UPDATE).</div>
+
+<div class="grid" style="margin-top: 14px;">
+    <div class="card">
+        <h2>Nodes</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Node</th>
+                <th>Status</th>
+                <th>Last Seen</th>
+            </tr>
+            </thead>
+            <tbody id="nodesBody">
+            <tr><td colspan="3">Loading...</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>Communication Log</h2>
+        <div id="events">Loading...</div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
