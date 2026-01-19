@@ -20,7 +20,7 @@ The goal of the project is to clearly show how **heartbeat-based failure detecti
 ## Architecture Overview
 
 - **Node**
-  - Sends heartbeat messages every fixed interval
+  - Sends heartbeat messages
   - Listens for membership updates from the Monitor
 
 - **Monitor**
@@ -28,12 +28,19 @@ The goal of the project is to clearly show how **heartbeat-based failure detecti
   - Maintains a membership table
   - Detects failed nodes using timeouts
   - Broadcasts membership changes
+ 
+- **Dashboard**
+  - Listens to RabbitMQ (heartbeats + membership updates)
+  - Stores state in memory
+  - Offers REST API
+  - Displays web interface
+  - Web Dashboard can be opened on http://localhost:8080
 
 ---
 
 ## Technologies and Tools
 
-- **Programming Language:** Java
+- **Programming Language:** Java, JavaScript, HTML
 - **Messaging System:** RabbitMQ
 - **Docker + Docker Compose**
 - **Build Tool:** Maven
