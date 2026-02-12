@@ -10,8 +10,8 @@ import java.util.concurrent.ConcurrentHashMap;
 public class MonitorMain {
 
     private static final String queueName = "HEARTBEAT.queue";
-    private static final long suspectMs = 4000; //ako nema 4 sek heartbeat, suspect
-    private static final long deadMs = 8000; //ako nema 8 sek heartbeat, dead
+    private static final long suspectMs = 7000; //ako nema 7 sek heartbeat, suspect
+    private static final long deadMs = 14000; //ako nema 14 sek heartbeat, dead
     private static final String membershipExchange = "membership_exchange";
 
     //status za nodes ot
