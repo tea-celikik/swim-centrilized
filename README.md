@@ -59,6 +59,6 @@ docker compose up -d
 ```
 
 
-## Authors
+## Author
 
 - Tea Celikik
